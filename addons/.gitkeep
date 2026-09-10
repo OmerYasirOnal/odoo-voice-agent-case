@@ -1,0 +1,3 @@
+# Bu dosya boş `addons/` klasörünün repoda kalmasını sağlar.
+# Git boş klasörleri takip etmez; bu klasör compose.yaml içinde
+# /mnt/extra-addons olarak mount edildiği için var olması gerekiyor.
