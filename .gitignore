@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Python / Odoo
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editor
+.idea/
+.vscode/
+
+# Local ortam
+.env
+*.local
+
+# Vim swap
+*.swp
+*.swo
+*~
