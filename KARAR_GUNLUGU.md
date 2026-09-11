@@ -172,11 +172,43 @@ doğrulama adımı atlanmazsa.
 
 ---
 
+## K-004 — Case senaryosundaki şirket için edition önerisi: Enterprise
+
+**Tarih:** 11 Eylül 2026 · **Alan:** Araştırma (1a)
+
+**Açıklama**
+Araştırmanın 3. sorusunda, senaryodaki grup şirketi için **Odoo Enterprise** önerildi.
+OCA modülleri buna ek olarak kullanılacak (ikisi birbirini dışlamıyor).
+
+**Gerekçe**
+- Community kurulumunda `mrp_workorder` yok (kendi kurulumumda doğrulandı). Beyaz eşya
+  üretimi iş istasyonu bazlı bir süreç; OCA bu katmanı doldurmuyor.
+- `account_accountant` Community'de yok. Grup yapısında çoklu şirket muhasebesi gerekiyor.
+- Odoo'da major sürüm ömrü 3 yıl. Bu ölçekte yükseltme sürekli bir sorumluluk;
+  Enterprise aboneliği veritabanı yükseltme servisini içeriyor.
+
+**Alternatifler**
+- *Community + OCA:* Şirketin **iç Odoo geliştirme ekibi varsa** bu tercih edilirdi.
+  Enterprise'ın maliyeti kullanıcı başına ve doğrusal; üretim + depo + fulfillment
+  profilinde operasyonel kullanıcı sayısı hızla üç haneye çıkar. Enterprise'ın asıl
+  sattığı şey yazılım değil risk transferi (yükseltme, destek, sorumluluk); bu riski
+  taşıyabilen bir ekip varsa transfer için ödeme yapmanın anlamı azalır.
+
+**Beklenen etki**
+Enterprise seçilmesi OCA'ya olan ihtiyacı ortadan kaldırmıyor: `queue_job`, `report_xlsx`,
+`stock_inventory` gibi modüllerin karşılığı hiçbir edition'da yok. Ayrıca Türk kargo ve
+pazaryeri entegrasyonları ile garanti takibi her iki yolda da custom yazılacak.
+
+**Kaynak**
+- `ARASTIRMA.md` → Bölüm 1.3 (Community'de bulunmayan modüllerin ölçümü) ve Bölüm 3.
+
+---
+
 ## Açık kararlar
 
 | Kimlik | Konu | Ne zaman |
 |---|---|---|
-| K-004 | Repo klasör yapısı: iki case tek repoda nasıl ayrılacak? | Case 2'ye başlarken |
+| K-010 | Repo klasör yapısı: iki case tek repoda nasıl ayrılacak? | Case 2'ye başlarken |
 | K-005 | `odoo.conf` repoya alınıp mount edilecek mi? | Addon'a başlarken |
 | K-006 | Garanti süresi `product.template`'te mi `product.product`'ta mı? | Addon tasarımı |
 | K-007 | Seri numarası `Char` mı, `stock.lot` ilişkisi mi? | Addon tasarımı |

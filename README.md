@@ -17,7 +17,7 @@ dışı bırakılanlar → **[KARAR_GUNLUGU.md](KARAR_GUNLUGU.md)**
 | Bölüm | Durum |
 |---|---|
 | Case 1b — Docker ortamı | ✅ Çalışıyor |
-| Case 1a — Araştırma | 🚧 Devam ediyor |
+| Case 1a — Araştırma | ✅ [ARASTIRMA.md](ARASTIRMA.md) |
 | Case 1b — Custom addon | ⬜ Başlanmadı |
 | Case 2a — Mimari | ⬜ Başlanmadı |
 | Case 2b — Uygulama | ⬜ Başlanmadı |
